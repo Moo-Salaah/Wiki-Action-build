@@ -14,6 +14,10 @@ if [ -z "$GH_TOKEN" ]; then
     exit 1
 fi
 
+if which node > /dev/null then
+    echo "node is installed, skipping..."
+    exit 1
+fi
 
 #Clone repo
 echo "Cloning repo https://github.com/$GITHUB_REPOSITORY"
