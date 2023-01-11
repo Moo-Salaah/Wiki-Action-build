@@ -1,5 +1,5 @@
-name: 'Update wiki'
-description: 'This action updates wiki repository with changes made in base repository'
+name: 'Update Agreena wiki'
+description: 'This action updates Agreena wiki repository with changes made in base repository'
 inputs:
   path:  
     description: 'Location of wiki directory'
