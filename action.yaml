@@ -12,6 +12,13 @@ runs:
   using: "composite"
   steps:
     - uses: actions/setup-node@v3
+      with:
+        node-version: "18"
+        cache: "npm"
+        registry-url: "https://npm.pkg.github.com"
+        scope: "@agreena-aps"
+      env:
+        NODE_AUTH_TOKEN: ${{ inputs.token }}
     - run: sh ${{ github.action_path }}/update-wiki.sh 
       shell: bash
       env:       
