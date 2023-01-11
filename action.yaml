@@ -13,6 +13,7 @@ runs:
   steps:
     - uses: actions/setup-node@v3
     - run: sh ${{ github.action_path }}/update-wiki.sh 
+      shell: bash
       env:       
         WIKI_DIR: ${{ inputs.path }}
         GH_TOKEN: ${{ inputs.token }}
