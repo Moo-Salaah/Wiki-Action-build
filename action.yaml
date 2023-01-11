@@ -12,8 +12,7 @@ runs:
   using: "composite"
   steps:
     - uses: actions/setup-node@v3
-    - run: ${{ github.action_path }}/update-wiki.sh 
-      shell: bash
+    - run: sh ${{ github.action_path }}/update-wiki.sh 
       env:       
         WIKI_DIR: ${{ inputs.path }}
         GH_TOKEN: ${{ inputs.token }}
